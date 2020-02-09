@@ -1,0 +1,77 @@
+html,
+body {
+  background-color: rgba(29, 34, 39, 1);
+  color: #295882;
+  margin: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+li {
+  padding: 0.2rem 0;
+}
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #e57dba;
+}
+
+header {
+  max-width: 680px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+main {
+  color: #7a8fa3;
+  background-color: rgba(37, 44, 50, 1);
+  max-width: 680px;
+  margin: auto;
+  padding: 1rem;
+}
+.subTitle {
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+.logo {
+  width: 50px;
+}
+
+.buyButton {
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  background-color: #0088ff;
+  color: white;
+  font-weight: 600;
+}
+
+.buttonArea {
+  padding: 1rem 0;
+}
+
+.info {
+  margin: 0.2rem;
+}
