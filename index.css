@@ -2,7 +2,7 @@ html,
 body {
   background-color: rgba(29, 34, 39, 1);
   color: #295882;
-  margin: none;
+  margin: 0;
 }
 
 h1,
@@ -17,6 +17,7 @@ h1 {
 }
 h2 {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 h3 {
   font-size: 1.5rem;
@@ -45,7 +46,8 @@ main {
   background-color: rgba(37, 44, 50, 1);
   max-width: 680px;
   margin: auto;
-  padding: 1rem;
+  padding: 2rem;
+  border-radius: 8px;
 }
 .subTitle {
   color: whitesmoke;
@@ -55,7 +57,8 @@ main {
   margin-bottom: 2rem;
 }
 .logo {
-  width: 50px;
+  margin-top: 3rem;
+  width: 100px;
 }
 
 .buyButton {
@@ -69,9 +72,29 @@ main {
 }
 
 .buttonArea {
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
 }
 
 .info {
   margin: 0.2rem;
+  color: rgb(150, 167, 185);
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.version {
+  color: rgb(150, 167, 185);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+}
+
+.divider {
+  width: 100%;
+  padding: 1rem 0 0 0;
+  margin-top: 1rem;
+  border-top: 1px solid #404b56;
+}
+
+.screenshot {
+  width: 100%;
 }
