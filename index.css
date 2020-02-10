@@ -45,7 +45,7 @@ video {
   width: 100%;
 }
 main {
-  color: #7a8fa3;
+  color: #cce5fd;
   background-color: rgba(37, 44, 50, 1);
   max-width: 680px;
   margin: auto;
@@ -72,10 +72,18 @@ main {
   background-color: #0088ff;
   color: white;
   font-weight: 600;
+  transition: background-color 1s ease;
+}
+
+.buyButton:hover {
+  background-color: #0266be;
 }
 
 .buttonArea {
   padding: 1rem 0 0 0;
+  position: sticky;
+  top: 10px;
+  z-index: 999;
 }
 
 .info {

@@ -3,9 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="LowKey Image Viewer is a fast and simple image and video viewer for
+    macOS and Windows that supports .jpg, .png, .gif, .mp4, and .webm file
+    types. Designed for a visually rich experience that puts the images
+    first with no distractions. It works great with either a mouse and scroll wheel or a laptop and trackpad.
+    View entire folders in folder view with options for recursive image discovery, sorting, and file type filters."
+    />
+    <meta property="og:url" content="https://lowkeyviewer.com" />
+    <meta property="og:type" content="product" />
+    <meta property="og:title" content="LowKey Image Viewer" />
+    <meta
+      property="og:description"
+      content="An image viewer for viewing images really well and nothing more."
+    />
+    <meta
+      property="og:image"
+      content="https://lowkeyviewer.com/screenshot.jpg"
+    />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./index.css" />
+    <script src="https://gumroad.com/js/gumroad.js"></script>
     <title>Lowkey Image Viewer</title>
   </head>
   <body>
@@ -27,7 +47,11 @@
         <span class="fileType webm">.webm</span> files.
       </p>
       <p class="buttonArea">
-        <a href="https://gumroad.com/l/UVvUM" class="buyButton"
+        <a
+          class="buyButton"
+          href="https://gum.co/UVvUM?wanted=true"
+          target="_blank"
+          data-gumroad-single-product="true"
           >Buy Now | 13.99</a
         >
       </p>
@@ -86,7 +110,7 @@
       </p>
       <div class="divider" />
 
-      <h2>How to Use Lowkey Image Viewer</h2>
+      <h2 id="help">How to Use Lowkey Image Viewer</h2>
       <p>
         Lowkey Image Viewer is designed to be as simple as possible, but it does
         have some important features that will help you get the most out your
@@ -298,7 +322,7 @@
       ></video>
 
       <div class="divider" />
-      <h2>Help and Support</h2>
+      <h2 id="support">Help and Support</h2>
       <p>
         Still have a problem not answered here? Send me an email and I'm happy
         to help! There is also a seperate email for feature requests and refund
@@ -324,11 +348,12 @@
       </ul>
       <div class="divider" />
 
-      <h2>Credits Thanks and Attribution</h2>
+      <h2 id="credits">Credits Thanks and Attribution</h2>
       <p>
         The following projects were used in the creation of Low Key Image
         Viewer. Thank you for making your work available for others to use.
       </p>
+      <ul></ul>
       <li>
         <a href="https://twemoji.twitter.com/">Twemoji</a> by Twitter via
         CC-BY4.0
@@ -341,6 +366,7 @@
         <a href="https://unsplash.com/">Beeple</a> used for samples in demo and
         tutorial videos.
       </li>
+    </ul>
     </main>
   </body>
 </html>
