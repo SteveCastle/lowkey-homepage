@@ -7,7 +7,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: Arial, Helvetica, sans-serif;
   color: whitesmoke;
 }
@@ -31,7 +32,6 @@ li {
 }
 a {
   text-decoration: none;
-  font-size: 1rem;
   color: #e57dba;
 }
 
@@ -40,6 +40,9 @@ header {
   margin: auto;
   text-align: center;
   margin-bottom: 50px;
+}
+video {
+  width: 100%;
 }
 main {
   color: #7a8fa3;
@@ -97,4 +100,24 @@ main {
 
 .screenshot {
   width: 100%;
+}
+
+.os {
+  color: oldlace;
+}
+
+.jpg {
+  color: #f38dc0;
+}
+.png {
+  color: #f3d88d;
+}
+.gif {
+  color: #8df38d;
+}
+.mp4 {
+  color: #4763fd;
+}
+.webm {
+  color: #f38d8d;
 }
