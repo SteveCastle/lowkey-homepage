@@ -129,3 +129,14 @@ main {
 .webm {
   color: #f38d8d;
 }
+
+.saleBanner {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  background-color: #ff5e33;
+}
