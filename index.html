@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="Description"
-      content="LowKey Image Viewer is a fast and simple image and video viewer for
+      content="LowKey Image Viewer is a fast and simple free image viewer for
     macOS and Windows that supports .jpg, .png, .gif, .mp4, and .webm file
     types. Designed for a visually rich experience that puts the images
     first with no distractions. It works great with either a mouse and scroll wheel or a laptop and trackpad.
@@ -25,7 +25,6 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./index.css" />
-    <script src="https://gumroad.com/js/gumroad.js"></script>
     <title>Lowkey Image Viewer</title>
         <!-- Global site tag (gtag.js) - Google Ads: 666016632 -->
         <script
@@ -42,9 +41,21 @@
         gtag("config", "AW-666016632");
         gtag("config", "UA-68258529-4");
       </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Lowkey Image Viewer",
+        "operatingSystem": "Windows 10, MacOS",
+        "applicationCategory": "MultimediaApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0"
+          }
+      }
+      </script>
   </head>
   <body>
-    <div class="saleBanner">Use code 'presidents' for 50% off.</div>
     <header>
       <img src="logo.png" class="logo" />
       <h1>Lowkey Image Viewer</h1>
@@ -53,7 +64,7 @@
       </p>
       <p class="info">
         Works on <span class="os windows">Windows 10</span> and
-        <span class="os mac">macOs</span>
+        <span class="os mac">macOS</span> (Linux Coming Soon!)
       </p>
       <p class="info">
         Supports <span class="fileType jpg">.jpg</span>,
@@ -64,14 +75,15 @@
       </p>
       <p class="buttonArea">
         <a
+          id="downloadButton"
           class="buyButton"
-          href="https://gum.co/UVvUM?wanted=true"
-          target="_blank"
-          data-gumroad-single-product="true"
-          >Buy Now | $13.96</a
+          href="/downloads/LowKey Image Viewer Setup 1.0.5.exe"
+          >Download | Free</a
         >
       </p>
       <p class="version">Version 1.0.5</p>
+      <p class="license"><a href="https://github.com/SteveCastle/loki/blob/master/LICENSE"><img src="mit.svg"/></a></p>
+      <p class="github"><a href="https://github.com/SteveCastle/loki"><img src="GitHub-Mark-Light-32px.png"/></a></p>
       <video src="./screencapture.mp4" loop autoplay muted controls></video>
     </header>
     <main>
@@ -88,12 +100,12 @@
         <li>Simple Low Clutter UI</li>
         <li>No Wasted Space - Only your Images</li>
         <li>Folder Based Navigation and A Better List View Experience</li>
-        <li>Full Animated File Type Support</li>
-        <li>No Subscriptions</li>
+        <li>Support for the most common Animated and Video File Types (mp4, gif, webm)</li>
+        <li>No Subscriptions, No Auto Update, No Connecting to the Internet for Any Reason</li>
       </ul>
       <p>
         Lowkey Image Viewer also does not create any aditional photo database,
-        or connect to the internet unless you explicitly turn on auto-updates.
+        or connect to the internet. It uses your file system directly for images.
       </p>
       <div class="divider" />
       <h2>Options and Settings</h2>
@@ -188,20 +200,7 @@
         will appear, click on it to view all images in the current directory.
       </p>
       <video src="./help_videos/list.mp4" loop autoplay muted controls></video>
-      <h3>Registration</h3>
-      <p>
-        You will need to enter a registration key to use this product. You can
-        get one on <a href="https://gumroad.com/l/UVvUM">Gumroad</a>. Copy and
-        paste in to the about section then click Register. You can now close the
-        About screen.
-      </p>
-      <video
-        src="./help_videos//registration.mp4"
-        loop
-        autoplay
-        muted
-        controls
-      ></video>
+
       <h3>Include files in subfolders with Recursive Mode</h3>
       <p>
         Open the settings panel by moving your mouse to the bottom left corner
@@ -357,14 +356,6 @@
         </li>
 
       </ul>
-      <p>Try Lowkey Image Viewer risk free for 30 days. If for any reason you are unsatisfied your purchase will be refunded.</p>
-      <ul>
-        <li>
-          <a href="mailto:refunds@lowkeyviewer.com"
-            >Refund Requests: refunds@lowkeyviewer.com</a
-          >
-        </li>
-      </ul>
       <div class="divider" />
 
       <h2 id="credits">Credits Thanks and Attribution</h2>
@@ -387,5 +378,21 @@
       </li>
     </ul>
     </main>
+    <script>
+      function trackDownload() {
+        gtag('event', 'click', {'event_category':'download','event_label': window.navigator.platform});
+      }
+      const el = document.getElementById('downloadButton')
+      console.log('running thing', el);
+      if(window.navigator.platform === 'MacIntel') {
+        el.setAttribute('href', 'https://github.com/SteveCastle/loki/releases/download/v1.0.5/LowKey.Image.Viewer-1.0.5.dmg')
+        el.innerHTML  = "Download | Free for Mac"
+      } else {
+        el.setAttribute('href', 'https://github.com/SteveCastle/loki/releases/download/v1.0.5/LowKey.Image.Viewer.Setup.1.0.5.exe')
+        el.innerHTML  = "Download | Free for Windows"
+      }
+
+      el.addEventListener("click", trackDownload, false);
+    </script>
   </body>
 </html>
