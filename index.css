@@ -141,3 +141,7 @@ main {
   color: white;
   background-color: #ff5e33;
 }
+
+img {
+  width: 100%;
+}
