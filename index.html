@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-68258529-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-68258529-4");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -13,10 +27,10 @@
     />
     <meta property="og:url" content="https://lowkeyviewer.com" />
     <meta property="og:type" content="product" />
-    <meta property="og:title" content="LowKey Image Viewer" />
+    <meta property="og:title" content="LowKey Media Viewer" />
     <meta
       property="og:description"
-      content="An image viewer for viewing images really well and nothing more."
+      content="An image viewer for viewing and curating images really well and nothing more."
     />
     <meta
       property="og:image"
@@ -25,27 +39,12 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./index.css" />
-    <title>Lowkey Image and WebM Viewer</title>
-    <!-- Global site tag (gtag.js) - Google Ads: 666016632 -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-666016632"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "AW-666016632");
-      gtag("config", "UA-68258529-4");
-    </script>
+    <title>Lowkey Media Viewer</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Lowkey Image Viewer",
+        "name": "Lowkey Media Viewer",
         "operatingSystem": "Windows 10, MacOS",
         "applicationCategory": "MultimediaApplication",
         "offers": {
@@ -57,11 +56,11 @@
   </head>
   <body>
     <header>
-      <img src="logo.png" class="logo" alt="Lowkey Image Viewer Logo" />
-      <h1>Lowkey Image and WebM Viewer</h1>
+      <img src="logo.png" class="logo" alt="Lowkey Media Viewer Logo" />
+      <h1>Lowkey Media Viewer</h1>
       <p class="subTitle">
-        A free open source image viewer for viewing images and videos really
-        well and nothing more.
+        A free open source image viewer for viewing and curating images and
+        videos really well and nothing more.
       </p>
       <p class="info">
         Works on <span class="os windows">Windows 10</span> and
@@ -78,11 +77,12 @@
         <a
           id="downloadButton"
           class="buyButton"
-          href="https://github.com/SteveCastle/loki/releases/download/v1.1.2/LowKey.Image.Viewer-1.1.2.dmg"
+          href="https://github.com/SteveCastle/loki/releases/download/v2.0.0/LowKey.Image.Viewer-2.0.0.dmg"
           >Download | Free</a
         >
       </p>
-      <p class="version">Version 1.1.4</p>
+      <p class="version">Version 2.0.0</p>
+      <a href="/v1" target="_blank" class="v1">Find V1 Here </a>
       <p class="license">
         <a href="https://github.com/SteveCastle/loki/blob/master/LICENSE"
           ><img src="mit.svg"
@@ -98,7 +98,7 @@
     <main>
       <h2>Features</h2>
       <p>
-        LowKey Image Viewer is a fast and simple image and video viewer for
+        LowKey Media Viewer is a fast and simple image and video viewer for
         macOS and Windows that supports .jpg, .png, .gif, .mp4, and .webm file
         types. Designed for a visually rich experience that puts the images
         first with no distractions. Supports easy navigation with Mouse and
@@ -109,145 +109,145 @@
         <li>Simple Low Clutter UI</li>
         <li>No Wasted Space - Only your Images</li>
         <li>Folder Based Navigation and A Better List View Experience</li>
+        <li>Lightweight Media Curation and Organization</li>
+        <li>Transcript Based Video Navigation</li>
         <li>
           Support for the most common Animated and Video File Types (mp4, gif,
-          webm)
-        </li>
-        <li>
-          No Subscriptions, No Auto Update, No Connecting to the Internet for
-          Any Reason
+          webm, h265)
         </li>
       </ul>
+      <h2>Basic Navigation</h2>
       <p>
-        Lowkey Image Viewer also does not create any aditional photo database,
-        or connect to the internet. It uses your file system directly for
-        images.
+        The main design principal of navigation in Lowkey Media Viewer is that
+        you should spend most of your time and screen real estate on your images
+        and videos.
       </p>
-      <div class="divider" />
-      <h2>Options and Settings</h2>
+      <h3>Open a File/Directory</h3>
       <p>
-        Lowkey Image Viewer supports many customization options so you can set
-        it up for the way you prefer to browse images.
+        When you launch Lowkey Image Viewer you will be asked to select a file.
+        Opening a file, automatically loads the other files in the directory
+        into the list view. You can also associate media file types with LowKey
+        Media Viewer and open files directly. You can change files at any time
+        by using the file icon in the Command Palette.
       </p>
-      <ul>
-        <li>Sort Order</li>
-        <li>File Filtering</li>
-        <li>Scaling Modes</li>
-        <li>Control Modes (Mouse or Trackpad Optimized)</li>
-        <li>Full Screen and Always on Top</li>
-      </ul>
+      <video src="./help/open-file.mp4" loop muted controls></video>
+      <h3>Using Panels</h3>
       <p>
-        See the help selection below for more information on changing settings.
-        Is there a setting you'd like but don't see? Send me a
-        <a href="mailto:features@lowkeyviewer.com">feature request</a>
-        and I will add it if it makes sense.
+        There are four panels: List View(Left), Detail View(Middle),
+        MetaData(Right), and Tagging(Bottom). To open a closed panel simply drag
+        it open by clicking and dragging from the edge of screen. To close a
+        panel drag the border between panels back to the edge.
       </p>
-      <div class="divider" />
+      <video src="./help/panels.mp4" loop muted controls></video>
+      <h3>Using the Command Palette</h3>
+      <p>
+        Right click anywhere on the screen to bring up the command palette. This
+        is the primary location of all controls and options in Lowkey Media
+        Viewer.
+      </p>
+      <video src="./help/command.mp4" loop muted controls></video>
+      <h3>Resizing List View Grid</h3>
+      <p>
+        To modify the size of the items in the list view grid use the grid tab
+        in the command palette.
+      </p>
+      <video src="./help/grid-size.mp4" loop muted controls></video>
+      <h3>Shuffle</h3>
+      <p>
+        To shuffle the images you can either click the shuffle icon in the
+        command palette, or hit the X key. Use the sorting options in the
+        command palette to return to a sorted view.
+      </p>
+      <video src="./help/shuffle.mp4" loop muted controls></video>
+      <h2>Curation</h2>
+      <p>
+        Lowkey Image Viewer includes an optional tagging panel that you can use
+        to create collections of images and videos. Tags are saved to a local
+        SQLite database in your home directory.
+      </p>
+      <h3>Creating a Category and Tag</h3>
+      <video src="./help/create-tag.mp4" loop muted controls></video>
 
-      <h2 id="features">How to Use Lowkey Image Viewer</h2>
+      <h3>Tagging an Image or Video</h3>
       <p>
-        Lowkey Image Viewer is designed to be as simple as possible, but it does
-        have some important features that will help you get the most out your
-        experience.
+        You can apply a tag by dragging it to either an image detail view, or an
+        image in the list view.
       </p>
+      <video src="./help/apply-tag.mp4" loop muted controls></video>
 
-      <h3>Opening an Image or Video</h3>
+      <h3>Using an Image or Video as the Tag Preview Image</h3>
       <p>
-        You can open an image by using your native file browser. Just select a
-        supported image type and open it using LowKey Image Viewer, which should
-        be added to the list of available programs automatically.
+        Hold down the <b>Shift</b> key before dragging a tag on to an image to
+        use that image as the tag preview. You can also toggle on the Apply Tag
+        Preview option in the Tagging panel side bar.
       </p>
+      <video src="./help/tag-preview.mp4" loop muted controls></video>
+      <h3>Tag all Images in the current list</h3>
       <p>
-        Once inside of lowkey image viewer you can change the image by opening
-        the Command Palette with (RIGHT-CLICK) and clicking on the current file
-        name.
+        Hold down the <b>Control</b> key before dragging a tag on to an image in
+        the list view to apply the tag to every image currently in the list. Or
+        select the "Tag All Images" toggle in the Tagging Panel Sidebar.
       </p>
-      <h3>Switch Between Directory List View and Image or Video Detail View</h3>
-      <h4>In Mouse and Scroll Wheel Mode</h4>
+      <video src="./help/bulk-tagging.mp4" loop muted controls></video>
+      <h3>Reordering Tags and Media in a Collection</h3>
       <p>
-        Double click anywhere on the screen to open Directory List View, double
-        click on an image in list view to open that image.
+        You can reorder tags and media in a collection by dragging them to a new
+        location. You can only drag media if you are sorting by Weight.
       </p>
-      <h4>In Trackpad or Apple Magic Mouse Mode</h4>
+      <video src="./help/reorder.mp4" loop muted controls></video>
+      <h3>Selecting Tags to View</h3>
       <p>
-        Move your mouse to the bottom left corner of the window. A folder icon
-        will appear, click the folder to switch to list view. To select an image
-        to view, double click the image.
+        You can view individual tags, or combinations of tags. When selecting a
+        combination of tags you have the option of viewing all media that has at
+        least one of the tags selected, or media that has all of the tags
+        selected. To toggle this behavior use the Filtering Mode option located
+        in the Tagging Panel Sidebar.
       </p>
-      <img class="fullsize" src="/images/list-view.jpg" alt="List view demo" />
+      <video src="./help/filtering.mp4" loop muted controls></video>
+      <h3>Searching Tag and File Names</h3>
       <p>
-        In list view you can also click hold and drag the images to reposition
-        them inside the grid.
+        Use the text inputs in the Tagging panel to search for files by file
+        name in the active list view, or search for tags in your collection.
       </p>
-      <h3>Opening the Command Palette</h3>
+      <video src="./help/search.mp4" loop muted controls></video>
+      <h3>Edit and Delete Tags</h3>
       <p>
-        The Command Palette is the only place to find menu options and settings
-        in LowKey Image Viewer. To open it, right click anywhere on the screen
-        at any time. Click outside of the menu to close it. You can also lock
-        the menu open by clicking on the lock icon in the top right.
+        Tag names can be edited and deleted. Editing a name will update all
+        associated tag assignments. Deleting a tag will remove all tag
+        assignments. Careful, this is currently not reverseable.
       </p>
-      <h3>Command Palette: FileSystem Tab</h3>
+      <video src="./help/edit-tags.mp4" loop muted controls></video>
+      <h2>Metadata</h2>
       <p>
-        The FileSystem Tab allows you to see how many images are in the current
-        folder, and which image you are viewing. You can change directories, or
-        change the file here. You can also toggle whether or not the list of
-        images should recursively find files in nested folders.
+        You can view common file metadata, and transcripts in the Metadata tab.
+        Some types of metadata that are available include, Stable Diffusion
+        WebUI PNG metadata, gallery-dl download metadata, and standard file size
+        metadata.
       </p>
-      <img
-        class="fullsize"
-        src="/images/file-system.jpg"
-        alt="File system settings demo"
-      />
+      <h3>Viewing Transcripts</h3>
+      <p>
+        Use the transcript tab within the Metadata panel to view any transcripts
+        which are located in the same folder as the media file. Transcripts must
+        have the same file name as the media, plus be the .vtt file format to be
+        displayed.
+      </p>
+      <video src="./help/view-transcript.mp4" loop muted controls></video>
+      <h3>Generating Transcripts</h3>
+      <p>
+        If you have the whisper command installed locally you can use it to
+        generate transcripts.
+        <a href="https://github.com/openai/whisper#setup" target="_blank"
+          >Learn how to install whisper here.</a
+        >
+      </p>
+      <video src="./help/create-transcript.mp4" loop muted controls></video>
 
-      <h3>Command Palette: Sorting and Filtering Tab</h3>
-      <p>
-        The Sorting and Filtering Tab allows you to change the sort order or
-        file type filtering settings being applied.
-      </p>
-      <img
-        class="fullsize"
-        src="/images/filters-and-sorting.jpg"
-        alt="Filter and sorting settings demo"
-      />
-      <h3>Command Palette: Image and Video Tab</h3>
-      <p>
-        The Image and Video Tab allows you to Change the Image scaling, and
-        video options.
-      </p>
-      <img
-        class="fullsize"
-        src="/images/image-settings.jpg"
-        alt="Image settings demo"
-      />
-      <h3>Command Palette: Control Settings</h3>
-      <p>
-        The Cotrol Settings Tab lets you change the control style, and set the
-        hotkeys for any actions not found in other tabs.
-        <img
-          class="fullsize"
-          src="/images/control-settings.jpg"
-          alt="Control settings demo"
-        />
-      </p>
-      <h3>Hot Keys</h3>
-      <p>
-        You can configure the hotkeys on any action inside the Command Palette
-        if you see a key icon on the right hand side of the action button. Click
-        the button and you will be prompted to enter a new hotkey. If a hotkey
-        already exists on another action it will be removed and replaced.
-      </p>
-      <h3>Shuffle Images</h3>
-      <p>
-        You can shuffle all of the current images in the folder, or if in
-        recursive mode, in the folder and subfolders. By default the shuffle
-        hotkey is X but you can change it in the Control settings tab.
-      </p>
       <div class="divider" />
-      <h2 id="support">Support and Satisfaction Guarantee</h2>
+      <h2 id="support">Contact Info</h2>
       <p>
         Still have a problem not answered here? Send me an email and I'm happy
         to help! There is also a separate email for feature requests. All
-        development of Lowkey Image Viewer is driven by feature requests from
+        development of Lowkey Media Viewer is driven by feature requests from
         the community and updates are free forever.
       </p>
       <ul>
@@ -262,28 +262,8 @@
           >
         </li>
       </ul>
-      <div class="divider" />
-
-      <h2 id="credits">Credits Thanks and Attribution</h2>
-      <p>
-        The following projects were used in the creation of Low Key Image
-        Viewer. Thank you for making your work available for others to use.
-      </p>
-      <ul>
-        <li>
-          <a href="https://twemoji.twitter.com/">Twemoji</a> by Twitter via
-          CC-BY4.0
-        </li>
-        <li>
-          <a href="https://unsplash.com/">Unsplash</a> used for samples in demo
-          videos.
-        </li>
-        <li>
-          <a href="https://www.beeple-crap.com/">Beeple</a> used for samples in
-          demo and tutorial videos.
-        </li>
-      </ul>
     </main>
+
     <script>
       function trackDownload() {
         gtag("event", "click", {
@@ -296,13 +276,13 @@
       if (window.navigator.platform === "MacIntel") {
         el.setAttribute(
           "href",
-          "https://github.com/SteveCastle/loki/releases/download/v1.1.4/LowKey.Image.Viewer-1.1.4.dmg"
+          "https://github.com/SteveCastle/loki/releases/download/v2.0.0/LowKey.Image.Viewer-2.0.0.dmg"
         );
         el.innerHTML = "Download | Free for Mac";
       } else {
         el.setAttribute(
           "href",
-          "https://github.com/SteveCastle/loki/releases/download/v1.1.4/LowKey.Image.Viewer.Setup.1.1.4.exe.zip"
+          "https://github.com/SteveCastle/loki/releases/download/v2.0.0/LowKey.Image.Viewer.Setup.2.0.0.exe.zip"
         );
         el.innerHTML = "Download | Free for Windows";
       }
